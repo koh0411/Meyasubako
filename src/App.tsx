@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { AdminLayout } from './components/AdminLayout'
 import { Dashboard } from './pages/Dashboard'
 import { VoiceMemos } from './pages/VoiceMemos'
@@ -9,7 +9,7 @@ import { PublicBoard } from './pages/PublicBoard'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/board" element={<PublicBoard />} />
         <Route element={<AdminLayout />}>
@@ -20,6 +20,6 @@ export default function App() {
           <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
